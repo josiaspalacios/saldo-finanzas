@@ -15,12 +15,13 @@ Abre [http://localhost:8000](http://localhost:8000).
 
 ## Secciones
 
-- **Resumen:** balance del mes, gráficas y actividad reciente.
+- **Resumen:** saldo disponible registrado, accesos rápidos y principales cifras del período.
 - **Movimientos:** historial completo, búsqueda, filtros y exportación CSV.
 - **Presupuesto:** objetivo mensual, progreso y categorías de gasto.
+- **Análisis:** tendencias de ingresos y gastos y distribución mensual por categoría.
 - **Preferencias:** moneda, tema, respaldo y restauración de datos.
 
-Cada herramienta tiene su propia pantalla, con navegación dedicada y filtros o controles en el contexto que corresponde. La navegación utiliza URLs con hash para funcionar correctamente en GitHub Pages, un alojamiento de páginas estáticas.
+Cada herramienta tiene su propia pantalla y acceso en el menú para mantener el resumen principal despejado. La navegación utiliza URLs con hash para funcionar correctamente en GitHub Pages, un alojamiento de páginas estáticas.
 
 ## Comprobaciones
 

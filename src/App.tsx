@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { HashRouter, Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
 import TransactionDialog from "./components/TransactionDialog";
+import AnalysisPage from "./pages/AnalysisPage";
 import BudgetPage from "./pages/BudgetPage";
 import DashboardPage from "./pages/DashboardPage";
 import PreferencesPage from "./pages/PreferencesPage";
@@ -184,9 +185,10 @@ function FinanceApplication() {
           storageWarning={storageWarning}
           theme={settings.theme}
         />}>
-          <Route element={<DashboardPage currency={settings.currency} onAdd={openTransactionDialog} onDelete={deleteTransaction} transactions={transactions} />} path="/" />
+          <Route element={<DashboardPage currency={settings.currency} onAdd={openTransactionDialog} transactions={transactions} />} path="/" />
           <Route element={<TransactionsPage currency={settings.currency} onAdd={() => openTransactionDialog()} onDelete={deleteTransaction} onExport={exportTransactions} transactions={transactions} />} path="/movimientos" />
           <Route element={<BudgetPage budget={settings.monthlyBudget} currency={settings.currency} onSave={saveBudget} transactions={transactions} />} path="/presupuesto" />
+          <Route element={<AnalysisPage currency={settings.currency} transactions={transactions} />} path="/analisis" />
           <Route element={<PreferencesPage
             currency={settings.currency}
             onCurrencyChange={updateCurrency}

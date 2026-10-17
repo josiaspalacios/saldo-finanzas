@@ -4,6 +4,7 @@ import {
   ChartNoAxesCombined,
   ChevronDown,
   CircleHelp,
+  House,
   LockKeyhole,
   Menu,
   Moon,
@@ -16,9 +17,10 @@ import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { CURRENCIES, type CurrencyCode } from "../lib/finance";
 
 const NAVIGATION = [
-  { label: "Resumen", to: "/", icon: ChartNoAxesCombined, end: true },
+  { label: "Resumen", to: "/", icon: House, end: true },
   { label: "Movimientos", to: "/movimientos", icon: ArrowLeftRight },
   { label: "Presupuesto", to: "/presupuesto", icon: Wallet },
+  { label: "Análisis", to: "/analisis", icon: ChartNoAxesCombined },
   { label: "Preferencias", to: "/preferencias", icon: Settings2 },
 ];
 
@@ -26,6 +28,7 @@ const PAGE_NAMES: Record<string, string> = {
   "/": "Resumen",
   "/movimientos": "Movimientos",
   "/presupuesto": "Presupuesto",
+  "/analisis": "Análisis",
   "/preferencias": "Preferencias",
 };
 
